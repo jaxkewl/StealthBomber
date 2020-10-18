@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2300000}
   - component: {fileID: 9500000}
   - component: {fileID: 3122739882861177586}
+  - component: {fileID: -6613910237567276914}
   m_Layer: 0
   m_Name: GasBottle
   m_TagString: Gas
@@ -113,5 +114,21 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 56.211258, y: 105.9371, z: 56.211258}
-  m_Center: {x: -18.95441, y: 49.720688, z: -0.000009536743}
+  m_Size: {x: 155.69414, y: 152.28445, z: 132.18292}
+  m_Center: {x: -3.2145157, y: 52.20427, z: -1.8838806}
+--- !u!54 &-6613910237567276914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

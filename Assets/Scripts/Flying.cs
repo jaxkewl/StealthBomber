@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Flying : MonoBehaviour
 {
     public float power;
@@ -11,7 +11,7 @@ public class Flying : MonoBehaviour
     public float pitchGain;
     public float rollGain;
     public float yawGain;
-
+    public TextMeshProUGUI score;
     public int collectedCanCount;
 
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class Flying : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         collectedCanCount = 0;
+        score.text = "Score: 0";
     }
 
     // Update is called once per frame
@@ -81,6 +82,7 @@ public class Flying : MonoBehaviour
             other.gameObject.SetActive(false);
             ++collectedCanCount;
             Debug.Log($"total collected cans {collectedCanCount}");
+            score.text = "Score: " + collectedCanCount.ToString();
         }
     }
 }
