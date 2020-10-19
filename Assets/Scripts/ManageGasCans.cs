@@ -7,7 +7,8 @@ public class ManageGasCans : MonoBehaviour
     List<GameObject> cans = new List<GameObject>();
     public int canCount;
     public GameObject canPreFab;
-
+    
+    public int fuelAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +29,6 @@ public class ManageGasCans : MonoBehaviour
 
     }
 
-
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -37,5 +36,6 @@ public class ManageGasCans : MonoBehaviour
         {
             go.transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime * 2);
         }
+        
     }
 }
