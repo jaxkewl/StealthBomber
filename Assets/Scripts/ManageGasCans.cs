@@ -23,6 +23,8 @@ public class ManageGasCans : MonoBehaviour
             int y = rnd.Next(1, 2000);
             int z = rnd.Next(1, 10000);
             GameObject gasBottle = GameObject.Instantiate(canPreFab);
+            gasBottle.name = "gb" + i;
+                
             gasBottle.transform.position= new Vector3(x, y, z);
             cans.Add(gasBottle);
         }
@@ -36,6 +38,11 @@ public class ManageGasCans : MonoBehaviour
         {
             go.transform.Rotate(new Vector3(15, 30, 45) * Time.deltaTime * 2);
         }
+        
+    }
+
+    public void IlluminateCan()
+    {
         
     }
 }

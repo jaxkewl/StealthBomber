@@ -13,11 +13,17 @@ public class Flying : MonoBehaviour
     public float yawGain;
     public TextMeshProUGUI score;
     public TextMeshProUGUI fuel;
+    public TextMeshProUGUI sensed;
     public int collectedCanCount;
 
     private GameObject gameManager;
     private bool haveGas = true;
     public int fuelRemaining = 100;
+
+    private SphereCollider Sensor1;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +31,7 @@ public class Flying : MonoBehaviour
         collectedCanCount = 0;
         score.text = "Score: 0";
         gameManager = GameObject.Find("GasManager");
-
+        Sensor1 = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -93,16 +99,17 @@ public class Flying : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered!");
+        //Debug.Log($"bomber collider size: {this.gameObject.GetComponent<SphereCollider>().radius}");
+        //Debug.Log("Triggered!");
         if (other.gameObject.CompareTag("Gas"))
         {
             other.gameObject.SetActive(false);
             ++collectedCanCount;
-            Debug.Log($"total collected cans {collectedCanCount}");
+            //Debug.Log($"total collected cans {collectedCanCount}");
             score.text = "Score: " + collectedCanCount.ToString();
 
             fuelRemaining += gameManager.GetComponent<ManageGasCans>().fuelAmount;
-            
         }
+        
     }
 }

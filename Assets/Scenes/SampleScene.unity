@@ -144,6 +144,7 @@ MonoBehaviour:
   fuel: {fileID: 1174429335}
   collectedCanCount: 0
   fuelRemaining: 1000
+  Sensor1: {fileID: 0}
 --- !u!54 &68348210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -561,6 +562,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 196804, guid: a915a3285fc7e49638568c2e6c584872, type: 3}
   m_PrefabInstance: {fileID: 897688806}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &897754147
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897754146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 60.8
+  m_Center: {x: -0.000002861023, y: 0.26519865, z: 65.84}
 --- !u!4 &897986240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 494118, guid: a915a3285fc7e49638568c2e6c584872, type: 3}
